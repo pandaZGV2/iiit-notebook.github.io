@@ -4,9 +4,32 @@ title: Index
 <h1>Latest Notes</h1>
 
 <ul>
+	<li>Computer programming
     {% for post in site.posts %}
+	{% if 'CS0.101' in post.code %}
 	<li>
 	    <h2><a href="{{ post.url }}">{{ post.code | upcase }} - {{ post.title }}</a></h2>
 	</li>
+	{% endif %}
     {% endfor %}
+	</li>
+	<li>Discrete Structures
+	<ul>
+	{% for post in site.posts %}
+	{% if 'MA5.101' in post.code %}
+	<li>
+	    <h2><a href="{{ post.url }}">{{ post.code | upcase }} - {{ post.title }}</a></h2>
+	</li>
+		{% endif %}
+    {% endfor %}
+		</li>
+		<li>Introduction to Computing Technology
+			<ul>
+	{% for post in site.posts %}
+	{% if 'CS0.100' in post.code %}
+	<li>
+	    <h2><a href="{{ post.url }}">{{ post.code | upcase }} - {{ post.title }}</a></h2>
+	</li>
+		{% endif %}
+				{% endfor %}</li></ul>
 </ul>
